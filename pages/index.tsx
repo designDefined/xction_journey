@@ -2,8 +2,7 @@ import Head from "next/head";
 import styles from "./Home.module.scss";
 import { NextPage } from "next";
 import classNames from "classnames/bind";
-import ChapterCard from "@/components/Chapter/ChapterCard";
-import ChapterList from "@/components/Chapter/ChapterList";
+import ChapterList from "../components/home/ChapterList/ChapterList";
 
 const cx = classNames.bind(styles);
 

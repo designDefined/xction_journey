@@ -1,0 +1,23 @@
+@use "./styles/responsive";
+@use "./styles/color";
+@use "./styles/font";
+
+.ChapterList {
+  position: relative;
+}
+
+@include responsive.desktop {
+  .ChapterList {
+    width: 1024px;
+  }
+}
+@include responsive.tablet {
+  .ChapterList {
+    width: 100%;
+  }
+}
+@include responsive.mobile {
+  .ChapterList {
+    width: 100%;
+  }
+}

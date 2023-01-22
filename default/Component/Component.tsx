@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 interface Props {}
 
 const Component = ({}: Props) => {
-  return <div></div>;
+  return <div className={cx("")}></div>;
 };
 
 export default Component;
