@@ -1,0 +1,10 @@
+@use "./styles/responsive";
+@use "./styles/color";
+@use "./styles/font";
+
+@include responsive.desktop {
+}
+@include responsive.tablet {
+}
+@include responsive.mobile {
+}
