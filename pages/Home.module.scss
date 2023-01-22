@@ -1,0 +1,19 @@
+@use "../styles/font";
+@use "../styles/color";
+@use "../styles/fx/neon";
+.container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0b1f3a;
+}
+.logo {
+  @include font.rubikMono;
+  @include neon.text(#76101e, 1, #c9374c);
+  font-size: 50vw;
+  line-height: 0;
+  margin: 0.5em 0 0.8em 0;
+  color: color.$lighter-blue;
+}

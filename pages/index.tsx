@@ -1,9 +1,13 @@
 import Head from "next/head";
 import styles from "./Home.module.scss";
 import { NextPage } from "next";
+import classNames from "classnames/bind";
+import ChapterCard from "@/components/Chapter/ChapterCard";
+import ChapterList from "@/components/Chapter/ChapterList";
+
+const cx = classNames.bind(styles);
 
 const Home: NextPage = () => {
-  console.log(styles);
   return (
     <>
       <Head>
@@ -12,7 +16,11 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>X</main>
+      <main className={cx("container")}>
+        <div className={cx("logo")}>X</div>
+        <div className={cx("info")}>Xction의</div>
+        <ChapterList />
+      </main>
     </>
   );
 };
