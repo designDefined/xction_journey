@@ -1,3 +1,4 @@
+//reference: https://css-tricks.com/how-to-create-neon-text-with-css/
 @mixin neon-text-weak($color, $light-color) {
   text-shadow: 0 0 7px $light-color, 0 0 10px $light-color,
     0 0 21px $light-color, 0 0 42px $color;

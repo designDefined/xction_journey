@@ -17,7 +17,10 @@ const Home: NextPage = () => {
       </Head>
       <main className={cx("container")}>
         <div className={cx("logo")}>X</div>
-        <div className={cx("info")}>Xction의</div>
+        <div className={cx("info")}>
+          <p>인터랙티브 스토리텔링을</p>
+          <p>ready, Xction</p>
+        </div>
         <ChapterList />
       </main>
     </>

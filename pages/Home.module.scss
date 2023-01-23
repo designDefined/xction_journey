@@ -7,13 +7,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #0b1f3a;
+  background-color: #251d15;
 }
 .logo {
   @include font.rubikMono;
-  @include neon.text(#76101e, 1, #c9374c);
+  @include neon.text(
+    color.$sunset-basic-yellow,
+    1,
+    color.$sunset-lighter-yellow
+  );
   font-size: 50vw;
   line-height: 0;
   margin: 0.5em 0 0.8em 0;
-  color: color.$lighter-blue;
+  color: #ffffff;
+  transition: 0.8s;
+  cursor: pointer;
+  &:hover {
+    @include neon.text(
+      color.$sunset-basic-yellow,
+      2,
+      color.$sunset-lighter-yellow
+    );
+  }
+}
+.info {
+  @include font.gugi;
+  @include neon.text(color.$sunset-dark-magenta, 0, color.$sunset-basic-yellow);
+  font-size: 2.5rem;
+  color: white;
 }

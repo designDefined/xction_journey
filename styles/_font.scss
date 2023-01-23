@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Gugi&family=Stylish&display=swap");
+//@import url("https://fonts.googleapis.com/css2?&family=Gugi&family=Stylish&display=swap");
 @mixin rubikMono {
   font-family: "Black Ops One", sans-serif;
+}
+@mixin gugi {
+  font-family: "Gugi", cursive;
+}
+@mixin stylish {
+  font-family: "Stylish", sans-serif;
 }
