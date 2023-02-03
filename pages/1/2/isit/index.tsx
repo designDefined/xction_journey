@@ -19,7 +19,7 @@ const Index = ({}: Props) => {
       <div
         className={cx("toNext")}
         onClick={() => {
-          router.push("./collide");
+          router.push("./crossframe");
         }}
       >
         <div>요점은 관통하는 것</div>
