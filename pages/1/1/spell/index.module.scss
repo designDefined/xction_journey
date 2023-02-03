@@ -1,0 +1,42 @@
+@use "./styles/responsive";
+@use "./styles/position";
+@use "./styles/color";
+@use "./styles/font";
+@use "./styles/fx/shadow";
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: color.$sunset-darkest-brown;
+  color: white;
+  padding: 4em;
+  line-height: 300%;
+  .wrapper {
+    padding: 0 0 72px 0;
+  }
+  h1 {
+    color: inherit;
+    width: 100%;
+    font-size: 64px;
+    margin: 0.5em 0;
+  }
+
+  p {
+    width: 100%;
+    font-size: 28px;
+  }
+}
+.examples {
+  div {
+    margin-top: 0.5em;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 700;
+    color: color.$sunset-light-yellow;
+    cursor: pointer;
+    &:hover {
+      color: color.$sunset-dark-magenta;
+    }
+  }
+}

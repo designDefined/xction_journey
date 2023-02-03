@@ -1,0 +1,21 @@
+@use "./styles/responsive";
+@use "./styles/color";
+@use "./styles/font";
+@use "./styles/fx/shadow";
+
+.NextPage {
+  @include font.gugi;
+  @include shadow.box(3);
+  font-size: 20px;
+  color: white;
+  background-color: gray;
+  padding: 10px 20px;
+  border: 0;
+  transition: 0.5s ease;
+  cursor: pointer;
+  border-radius: 20px;
+  transform: translate(50px, 50px);
+  &:hover {
+    @include shadow.box(1);
+  }
+}

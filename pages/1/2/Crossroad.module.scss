@@ -1,0 +1,112 @@
+@use "./styles/responsive";
+@use "./styles/position";
+@use "./styles/color";
+@use "./styles/font";
+@use "./styles/fx/shadow";
+
+@include responsive.desktop {
+}
+@include responsive.tablet {
+}
+@include responsive.mobile {
+}
+
+.Crossroad {
+  @include position.flex-center;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.road {
+  @include shadow.box(1);
+  position: relative;
+  width: 50%;
+  height: 120px;
+  background-image: linear-gradient(
+    270deg,
+    hsl(240deg 100% 20%) 0%,
+    hsl(289deg 100% 21%) 11%,
+    hsl(315deg 100% 27%) 22%,
+    hsl(329deg 100% 36%) 33%,
+    hsl(337deg 100% 43%) 44%,
+    hsl(357deg 91% 59%) 56%,
+    hsl(17deg 100% 59%) 67%,
+    hsl(34deg 100% 53%) 78%,
+    hsl(45deg 100% 50%) 89%,
+    hsl(55deg 100% 50%) 100%
+  );
+  z-index: 10;
+  cursor: pointer;
+}
+.title {
+  @include shadow.text;
+  color: white;
+  position: absolute;
+  top: 1em;
+  font-size: 48px;
+  font-weight: 900;
+}
+.goodStory {
+  @include position.flex-center;
+  @include shadow.text;
+  position: absolute;
+  width: 25%;
+  left: 0;
+  font-size: 36px;
+  letter-spacing: 0.2em;
+  font-weight: 900;
+  border: 1px;
+  color: #fff4b4;
+  z-index: 10;
+  cursor: pointer;
+  .back {
+    position: absolute;
+    background-color: hsla(54, 93%, 50%, 0.45);
+    width: 100vh;
+    height: 100vh;
+    left: -25vh;
+    z-index: -1;
+    border-radius: 50%;
+    transform: scale(0);
+    pointer-events: none;
+    transition: 0.8s ease-in;
+  }
+  &:hover {
+    .back {
+      transform: scale(4);
+    }
+  }
+}
+.goodUx {
+  @include position.flex-center;
+  @include shadow.text;
+  position: absolute;
+  width: 25%;
+  right: 0;
+  font-size: 36px;
+  letter-spacing: 0.2em;
+  font-weight: 900;
+  border: 1px;
+  color: #8dbbf8;
+  z-index: 10;
+  cursor: pointer;
+  .back {
+    position: absolute;
+    background-color: hsla(216, 100%, 40%, 0.45);
+    width: 100vh;
+    height: 100vh;
+    left: -25vh;
+    z-index: -1;
+    border-radius: 50%;
+    transform: scale(0);
+    pointer-events: none;
+    transition: 0.8s ease-in;
+  }
+  &:hover {
+    .back {
+      transform: scale(4);
+    }
+  }
+}

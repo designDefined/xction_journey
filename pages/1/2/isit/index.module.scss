@@ -1,0 +1,66 @@
+@use "../../../../styles/responsive";
+@use "../../../../styles/position";
+@use "../../../../styles/color";
+@use "../../../../styles/font";
+@use "../../../../styles/fx/shadow";
+
+.container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.poster {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+  background-position: center;
+  background-size: auto 100%;
+  .filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    transition: 1s ease;
+  }
+  &.e1 {
+    background-image: url("https://img.etnews.com/photonews/1910/1232419_20191011155158_093_0001.jpg");
+    .filter {
+      background-color: #000000;
+    }
+  }
+  &.e2 {
+    background-image: url("https://thumb.mt.co.kr/06/2021/09/2021092406525330416_1.jpg/dims/optimize/");
+    .filter {
+      background-color: #000000;
+    }
+  }
+
+  &:hover {
+    .filter {
+      opacity: 0.2;
+    }
+  }
+}
+
+.toNext {
+  @include position.flex-center;
+  @include shadow.text;
+  position: absolute;
+  width: 100%;
+  bottom: 1.5em;
+  background-color: rgba(black, 0.5);
+  font-size: 64px;
+  color: white;
+  font-weight: 700;
+  padding: 8px;
+  cursor: pointer;
+  opacity: 0.3;
+  &:hover {
+    opacity: 1;
+  }
+}

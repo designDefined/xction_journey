@@ -1,0 +1,55 @@
+@use "../../styles/responsive";
+@use "../../styles/position";
+@use "../../styles/color";
+@use "../../styles/font";
+@use "../../styles/fx/neon";
+
+.TableOfContent {
+  @include font.stylish;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: color.$sunset-darkest-brown;
+  color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-bottom: 100px;
+}
+
+.title {
+  @include neon.text(
+    color.$sunset-basic-yellow,
+    1,
+    color.$sunset-lighter-yellow
+  );
+  font-size: 80px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.section {
+  font-size: 48px;
+  margin-top: 1.5em;
+  cursor: pointer;
+  transition: ease 0.3s;
+  &.s1 {
+    @include neon.text(#8383fa, 1, #d3d3ff);
+  }
+  &.s2 {
+    @include neon.text(white);
+  }
+  &.s3 {
+    @include neon.text(color.$sunset-basic-peach);
+  }
+  &:hover {
+    transform: scale(1.05);
+    opacity: 0.5;
+  }
+}
+.content {
+  margin-top: 1.5em;
+  font-size: 24px;
+}

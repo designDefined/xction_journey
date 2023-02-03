@@ -1,6 +1,7 @@
 @use "./styles/responsive";
 @use "./styles/color";
 @use "./styles/font";
+@use "./styles/fx/shadow";
 
 @include responsive.desktop {
 }
@@ -8,9 +9,12 @@
 }
 @include responsive.mobile {
 }
-
-.ChapterItem {
+Z .ChapterItem {
+  @include shadow.box(3);
+  width: 100%;
+  padding: 1rem;
   .title {
+    font-size: 2rem;
   }
   .order {
   }

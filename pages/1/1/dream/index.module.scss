@@ -1,0 +1,71 @@
+@use "./styles/responsive";
+@use "./styles/position";
+@use "./styles/color";
+@use "./styles/font";
+@use "./styles/fx/shadow";
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: color.$sunset-darkest-brown;
+}
+.already {
+  @include position.flex-center;
+  width: 100%;
+  height: 180px;
+  font-size: 64px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+.examples {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 600px;
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: 1s ease;
+  &.open {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  div {
+    width: 400px;
+    height: 600px;
+    background-position: center;
+    background-size: auto 100%;
+    &.e1 {
+      background-image: url("https://image.aladin.co.kr/product/38/56/cover500/898392067x_3.jpg");
+    }
+    &.e2 {
+      background-image: url("https://image.yes24.com/momo/TopCate1144/MidCate009/5660923.jpg");
+    }
+    &.e3 {
+      background-image: url("http://t1.daumcdn.net/cfile/110D7C10AD41E94702");
+    }
+  }
+}
+.andNext {
+  @include position.flex-center;
+  width: 100%;
+  color: white;
+  font-size: 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: 1s ease;
+  &.open {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}

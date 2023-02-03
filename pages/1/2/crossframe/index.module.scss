@@ -1,0 +1,58 @@
+@use "./styles/responsive";
+@use "./styles/position";
+@use "./styles/color";
+@use "./styles/font";
+@use "./styles/fx/shadow";
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    0deg,
+    hsl(240deg 75% 66%) 0%,
+    hsl(309deg 57% 60%) 10%,
+    hsl(343deg 96% 73%) 20%,
+    hsl(11deg 100% 77%) 30%,
+    hsl(31deg 87% 77%) 40%,
+    hsl(55deg 58% 83%) 50%,
+    hsl(55deg 59% 87%) 60%,
+    hsl(54deg 60% 90%) 70%,
+    hsl(54deg 61% 93%) 80%,
+    hsl(53deg 62% 97%) 90%,
+    hsl(0deg 0% 100%) 100%
+  );
+}
+.main {
+  @include position.flex-center;
+  width: 100%;
+  height: 100vh;
+  font-size: 80px;
+  color: white;
+  font-weight: bold;
+  .frame {
+    margin: 20px 0;
+    padding: 160px;
+    background: black;
+  }
+  .content {
+    @include shadow.text;
+    transition: 5s ease;
+    cursor: pointer;
+    &:hover {
+      transform: scale(2.5);
+    }
+  }
+}
+.andNext {
+  @include position.flex-center;
+  position: absolute;
+  width: 100%;
+  color: white;
+  font-size: 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  bottom: 60px;
+  &:hover {
+  }
+}

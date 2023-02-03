@@ -1,0 +1,35 @@
+@use "./styles/responsive";
+@use "./styles/position";
+@use "./styles/color";
+@use "./styles/font";
+@use "./styles/fx/shadow";
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(red, blue);
+}
+.main {
+  @include position.flex-center;
+  width: 100%;
+  height: 100vh;
+  font-size: 64px;
+  color: white;
+  font-weight: bold;
+  .short {
+    margin: 20px 0;
+  }
+}
+.andNext {
+  @include position.flex-center;
+  position: absolute;
+  width: 100%;
+  color: white;
+  font-size: 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  bottom: 60px;
+  &:hover {
+  }
+}

@@ -1,5 +1,7 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
 @import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Gugi&family=Stylish&display=swap");
-//@import url("https://fonts.googleapis.com/css2?&family=Gugi&family=Stylish&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Stylish&display=swap");
+
 @mixin rubikMono {
   font-family: "Black Ops One", sans-serif;
 }
@@ -8,4 +10,7 @@
 }
 @mixin stylish {
   font-family: "Stylish", sans-serif;
+}
+@mixin pretendard {
+  font-family: "Pretendard Variable", sans-serif;
 }

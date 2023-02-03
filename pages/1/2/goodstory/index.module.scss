@@ -1,0 +1,78 @@
+@use "../../../../styles/responsive";
+@use "../../../../styles/position";
+@use "../../../../styles/color";
+@use "../../../../styles/font";
+@use "../../../../styles/fx/shadow";
+
+.GoodStory {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.poster {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  cursor: pointer;
+  background-position: center;
+  background-size: auto 100%;
+  .filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+    transition: 1s ease;
+  }
+  &.king {
+    background-image: url("https://photo.jtbc.co.kr/news/2012/09/17/20120917101001663.jpg");
+    .filter {
+      background-color: #250909;
+    }
+  }
+  &.inception {
+    background-image: url("http://t1.daumcdn.net/movie/7b4dd01f05e74ec79136e419f674196d1578962830150");
+    .filter {
+      background-color: #113320;
+    }
+  }
+
+  &.knivesOut {
+    background-image: url("https://an2-img.amz.wtchn.net/image/v2/3vmuw6Aq1Fx0n7C4oVb4NQ.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk56STVlREV3T0RCeE9EQWlYU3dpY0NJNklpOTJNaTl6ZEc5eVpTOXBiV0ZuWlM4eE5qTTFOREEwTVRVM09ETXhOekEzT1RFd0luMC5zel93YlJTbU9KU2ZfSlJqWEMxcUtOMjVtbkwwT0J0dk1yb2hxOFVYN1Q0");
+    .filter {
+      background-color: #332911;
+    }
+  }
+  &.glory {
+    background-image: url("https://w.namu.la/s/c6d019b47ed6c7350f7bd245b787b409ae3ecd54cba951afeedf8c87b75740c68ef8c2a0b66514fcd970ec1431b5728e7eda1ba357ceb4898d74cca740397721a8158b95104fe000ba5991c5b10fd6d5f44f5c95b32b795ce9d0009fe8e9c96c815a7c63805d2b577d7af9fae5e8f633");
+    .filter {
+      background-color: #182149;
+    }
+  }
+  &:hover {
+    .filter {
+      opacity: 0.2;
+    }
+  }
+}
+
+.toNext {
+  @include position.flex-center;
+  @include shadow.text;
+  position: absolute;
+  width: 100%;
+  bottom: 1.5em;
+  background-color: rgba(black, 0.5);
+  font-size: 48px;
+  color: white;
+  font-weight: 700;
+  padding: 8px;
+  cursor: pointer;
+  opacity: 0.3;
+  &:hover {
+    opacity: 1;
+  }
+}

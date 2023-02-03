@@ -1,0 +1,78 @@
+@use "../../../../styles/responsive";
+@use "../../../../styles/position";
+@use "../../../../styles/color";
+@use "../../../../styles/font";
+@use "../../../../styles/fx/shadow";
+
+.container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.poster {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  cursor: pointer;
+  background-position: center;
+  background-size: auto 100%;
+  .filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    transition: 1s ease;
+  }
+  &.e1 {
+    background-image: url("https://hleecaster.com/wp-content/uploads/2020/08/detroit-become-human.jpg");
+    .filter {
+      background-color: #000000;
+    }
+  }
+  &.e2 {
+    background-image: url("https://mblogthumb-phinf.pstatic.net/MjAyMTAzMzBfMTI0/MDAxNjE3MDkxMjM1NzM0.079NUy4oRS8zVf1oWSfEzZ97-iLnCn_t38kCuPostaQg.MBzOEfCF9c3LSj1Zs4JuyPn_JJgga3vESnqE4tYVCDQg.JPEG.iscf_kr/1.%EA%B3%B5%EC%97%B0_%EC%97%B0%EA%B7%B9_%EC%89%AC%EC%96%B4%EB%A7%A4%EB%93%9C%EB%8B%88%EC%8A%A4(4.94.10).jpg?type=w800");
+    .filter {
+      background-color: #000000;
+    }
+  }
+
+  &.e3 {
+    background-image: url("https://ewhabrandcommunication.files.wordpress.com/2015/03/333.jpg?w=573&h=344");
+    .filter {
+      background-color: #000000;
+    }
+  }
+  &.e4 {
+    background-image: url("https://www.themoviedb.org/t/p/original/maSivPzLAmyKl3dpHHiCVUpcmQ4.jpg");
+    .filter {
+      background-color: #000000;
+    }
+  }
+  &:hover {
+    .filter {
+      opacity: 0.2;
+    }
+  }
+}
+
+.toNext {
+  @include position.flex-center;
+  @include shadow.text;
+  position: absolute;
+  width: 100%;
+  bottom: 1.5em;
+  background-color: rgba(black, 0.5);
+  font-size: 64px;
+  color: white;
+  font-weight: 700;
+  padding: 8px;
+  cursor: pointer;
+  opacity: 0.3;
+  &:hover {
+    opacity: 1;
+  }
+}
