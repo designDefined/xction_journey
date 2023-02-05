@@ -29,8 +29,7 @@ const TableOfContent = ({}: Props) => {
       <div
         className={cx("section", "s2")}
         onClick={() => {
-          location.href =
-            "https://www.notion.so/9dea94940deb4b0a958450ac0a412c8a";
+          router.push("./1/dream");
         }}
       >
         레퍼런스가 없는 창작?
